@@ -95,7 +95,15 @@
             <p class="text-sm text-gray-700 rounded-xl p-3" style="background: #F4F9FF;">{{ selectedEnq.message }}</p>
           </div>
           <UFormField label="Status">
-            <USelect v-model="editStatus" :options="[{label:'Pending',value:'pending'},{label:'Contacted',value:'contacted'},{label:'Resolved',value:'resolved'}]" class="w-full" />
+            <select v-model="editStatus"
+              class="w-full px-3 py-2 rounded-xl text-sm outline-none appearance-none cursor-pointer"
+              style="background: #F4F9FF; border: 1.5px solid rgba(28,45,94,0.1); color: #111827; font-family: var(--font-body);"
+              onfocus="this.style.borderColor='rgba(46,171,49,0.5)'"
+              onblur="this.style.borderColor='rgba(28,45,94,0.1)'">
+              <option value="pending">Pending</option>
+              <option value="contacted">Contacted</option>
+              <option value="resolved">Resolved</option>
+            </select>
           </UFormField>
           <UFormField label="Admin note">
             <UTextarea v-model="editNote" :rows="2" placeholder="Internal note…" class="w-full" />
