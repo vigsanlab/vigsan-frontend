@@ -30,11 +30,11 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Sawariya Seth Furniture — Handcrafted Furniture & Showroom',
+      title: 'Vigsan Healthcare Lab — Lab tests that come to your doorstep',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Premium handcrafted furniture, designed and manufactured in our Pune workshop.' },
+        { name: 'description', content: 'Vigsan Lab Test is a trusted online diagnostic platform offering accurate, affordable, and fast medical testing services. From routine blood tests to comprehensive health checkup packages, Vigsan provides reliable diagnostics with convenient home sample collection and quick digital reports. With advanced laboratory technology, certified professionals, and a patient-focused approach, Vigsan ensures quality healthcare services that are accessible, efficient, and secure. Book tests online, track reports easily, and take charge of your health with confidence.' },
       ],
       link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     },
