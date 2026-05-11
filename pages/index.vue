@@ -1,15 +1,14 @@
 <template>
   <div>
     <!-- ══ HERO ══════════════════════════════════════════════════════ -->
-    <section class="relative overflow-hidden hero-bg" style="min-height: 88vh; display: flex; flex-direction: column; justify-content: center;">
-      <!-- Dot grid overlay -->
-      <div class="dot-grid absolute inset-0 pointer-events-none" />
+    <section class="relative overflow-hidden" style="min-height: 88vh; display: flex; flex-direction: column; justify-content: center; background: #060B1A;">
+      <!-- SVG medical illustration background -->
+      <div class="absolute inset-0 pointer-events-none"
+        style="background-image: url('/hero-bg.svg'); background-size: cover; background-position: center right; background-repeat: no-repeat;" />
 
-      <!-- Floating decorative orbs -->
-      <div class="float-a absolute top-20 right-[8%] w-64 h-64 rounded-full pointer-events-none opacity-20"
-        style="background: radial-gradient(circle, #3EBD41 0%, transparent 70%); filter: blur(40px);" />
-      <div class="float-b absolute bottom-16 right-[25%] w-48 h-48 rounded-full pointer-events-none opacity-15"
-        style="background: radial-gradient(circle, #3B9BE8 0%, transparent 70%); filter: blur(32px);" />
+      <!-- Left-side dark fade so text stays crisp -->
+      <div class="absolute inset-0 pointer-events-none"
+        style="background: linear-gradient(100deg, rgba(6,11,26,0.92) 0%, rgba(6,11,26,0.75) 45%, rgba(6,11,26,0.15) 75%, transparent 100%);" />
 
       <div class="container-pad relative py-20 md:py-28">
         <div class="max-w-3xl">
@@ -61,12 +60,21 @@
         </div>
       </div>
 
-      <!-- Stats bar -->
-      <div style="background: rgba(0,0,0,0.25); border-top: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(8px);">
+      <!-- Stats bar — animated counters -->
+      <div ref="statsRef" style="background: rgba(0,0,0,0.25); border-top: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(8px);">
         <div class="container-pad py-6">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div v-for="stat in stats" :key="stat.label" class="stat-pill">
-              <p class="stat-number">{{ stat.value }}</p>
+            <div v-for="(stat, i) in stats" :key="stat.label" class="stat-pill">
+              <p class="stat-number">
+                <template v-if="stat.static">
+                  <span>{{ stat.staticValue }}</span>
+                </template>
+                <template v-else>
+                  <span>{{ stat.prefix }}</span>
+                  <span>{{ (displayValues[i] as number).toLocaleString('en-IN') }}</span>
+                  <span>{{ stat.suffix }}</span>
+                </template>
+              </p>
               <p class="stat-label">{{ stat.label }}</p>
             </div>
           </div>
@@ -238,12 +246,42 @@ const loading = ref(true)
 const featuredTests = ref<any[]>([])
 const packages = ref<any[]>([])
 
+// ── Animated counter stats ──────────────────────────────────────
 const stats = [
-  { value: '500+',    label: 'Tests Available'  },
-  { value: '10,000+', label: 'Happy Patients'   },
-  { value: '24–72h',  label: 'Report Delivery'  },
-  { value: '100%',    label: 'Certified Labs'   },
+  { target: 500,   prefix: '',  suffix: '+',    label: 'Tests Available', static: false },
+  { target: 10000, prefix: '',  suffix: '+',    label: 'Happy Patients',  static: false },
+  { target: null,  prefix: '',  suffix: '',     label: 'Report Delivery', static: true, staticValue: '24–72h' },
+  { target: 100,   prefix: '',  suffix: '%',    label: 'Certified Labs',  static: false },
 ]
+const displayValues = ref(stats.map((s) => s.static ? s.staticValue : 0))
+const statsRef = ref<HTMLElement | null>(null)
+const hasCounted = ref(false)
+
+const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4)
+
+const runCounters = () => {
+  if (hasCounted.value) return
+  hasCounted.value = true
+  const duration = 2000
+  const startTime = performance.now()
+  const tick = (now: number) => {
+    const elapsed = now - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    const eased = easeOutQuart(progress)
+    stats.forEach((stat, i) => {
+      if (!stat.static) displayValues.value[i] = Math.floor(eased * stat.target!)
+    })
+    if (progress < 1) requestAnimationFrame(tick)
+    else stats.forEach((stat, i) => { if (!stat.static) displayValues.value[i] = stat.target })
+  }
+  requestAnimationFrame(tick)
+}
+
+const { stop } = useIntersectionObserver(
+  statsRef,
+  ([entry]) => { if (entry.isIntersecting) { runCounters(); stop() } },
+  { threshold: 0.3 }
+)
 const trustBadges = [
   { title: 'Free Home Collection', sub: 'We come to you',         icon: HomeIcon    },
   { title: 'NABL Certified Labs',  sub: 'Nationally accredited',  icon: ShieldCheck },

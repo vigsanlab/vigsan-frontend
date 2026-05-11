@@ -1,0 +1,409 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" width="1440" height="820">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#060B1A"/>
+      <stop offset="40%"  stop-color="#0C1630"/>
+      <stop offset="75%"  stop-color="#142247"/>
+      <stop offset="100%" stop-color="#1C2D5E"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="78%" cy="35%" r="40%">
+      <stop offset="0%"   stop-color="#2EAB31" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2EAB31" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skyGlow" cx="90%" cy="72%" r="32%">
+      <stop offset="0%"   stop-color="#3B9BE8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#3B9BE8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="centerGlow" cx="62%" cy="50%" r="30%">
+      <stop offset="0%"   stop-color="#1C3D8A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1C3D8A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#060B1A" stop-opacity="1"/>
+      <stop offset="50%"  stop-color="#060B1A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#060B1A" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tubeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2A3F7A"/>
+      <stop offset="50%"  stop-color="#E8EDF8"/>
+      <stop offset="100%" stop-color="#2A3F7A"/>
+    </linearGradient>
+    <linearGradient id="tubeGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1C2D5E"/>
+      <stop offset="40%"  stop-color="#3B9BE8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#1C2D5E"/>
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#3EBD41" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#239126" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="liquid2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#3B9BE8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1566B5" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="liquid3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#F59E0B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1C3D8A"/>
+      <stop offset="100%" stop-color="#0C1630"/>
+    </linearGradient>
+    <radialGradient id="lensShine" cx="35%" cy="30%" r="60%">
+      <stop offset="0%"   stop-color="white" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1440" height="820" fill="url(#bgGrad)"/>
+  <rect width="1440" height="820" fill="url(#greenGlow)"/>
+  <rect width="1440" height="820" fill="url(#skyGlow)"/>
+  <rect width="1440" height="820" fill="url(#centerGlow)"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- MICROSCOPE — main centerpiece, right side                       -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(860, 30)" opacity="0.92">
+
+    <!-- Glow behind microscope -->
+    <ellipse cx="155" cy="420" rx="140" ry="160" fill="#1C3D8A" opacity="0.18"/>
+
+    <!-- Base platform -->
+    <rect x="50" y="540" width="210" height="32" rx="12" fill="#0F1E45"/>
+    <rect x="50" y="540" width="210" height="32" rx="12" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <rect x="70" y="572" width="170" height="10" rx="5" fill="#0A1530"/>
+    <!-- Base feet -->
+    <ellipse cx="100" cy="582" rx="28" ry="8" fill="#0A1530"/>
+    <ellipse cx="210" cy="582" rx="28" ry="8" fill="#0A1530"/>
+    <!-- Base LED strip -->
+    <rect x="80" y="542" width="150" height="4" rx="2" fill="#3B9BE8" opacity="0.5"/>
+
+    <!-- Vertical arm / pillar -->
+    <rect x="148" y="200" width="34" height="350" rx="6" fill="#0F1E45"/>
+    <rect x="148" y="200" width="34" height="350" rx="6" fill="none" stroke="rgba(59,155,232,0.2)" stroke-width="1"/>
+    <!-- Arm highlight stripe -->
+    <rect x="157" y="210" width="6" height="330" rx="3" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Coarse focus knob (right) -->
+    <ellipse cx="196" cy="360" rx="22" ry="30" fill="#0C1835"/>
+    <ellipse cx="196" cy="360" rx="22" ry="30" fill="none" stroke="rgba(59,155,232,0.35)" stroke-width="1.5"/>
+    <ellipse cx="196" cy="360" rx="14" ry="20" fill="#142247"/>
+    <!-- Knob lines -->
+    <line x1="184" y1="345" x2="184" y2="375" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <line x1="189" y1="342" x2="189" y2="378" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <line x1="194" y1="341" x2="194" y2="379" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <!-- Fine focus knob -->
+    <ellipse cx="196" cy="420" rx="16" ry="22" fill="#0C1835"/>
+    <ellipse cx="196" cy="420" rx="16" ry="22" fill="none" stroke="rgba(59,155,232,0.25)" stroke-width="1"/>
+
+    <!-- Stage platform -->
+    <rect x="60" y="380" width="165" height="20" rx="5" fill="#0F1E45"/>
+    <rect x="60" y="380" width="165" height="20" rx="5" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <!-- Stage clips -->
+    <rect x="76"  y="370" width="14" height="28" rx="3" fill="#0A1530"/>
+    <rect x="195" y="370" width="14" height="28" rx="3" fill="#0A1530"/>
+    <!-- Slide on stage — glowing blue sample -->
+    <rect x="95" y="378" width="95" height="24" rx="2" fill="#0D1F45" opacity="0.9"/>
+    <rect x="95" y="378" width="95" height="24" rx="2" fill="none" stroke="rgba(59,155,232,0.5)" stroke-width="1"/>
+    <!-- Sample glow on slide -->
+    <ellipse cx="143" cy="390" rx="22" ry="6" fill="#3B9BE8" opacity="0.35" filter="url(#softglow)"/>
+
+    <!-- Body tube — main barrel -->
+    <rect x="120" y="120" width="70" height="180" rx="8" fill="#0F1E45"/>
+    <rect x="120" y="120" width="70" height="180" rx="8" fill="none" stroke="rgba(59,155,232,0.25)" stroke-width="1"/>
+    <!-- Tube shine -->
+    <rect x="128" y="128" width="10" height="162" rx="4" fill="rgba(255,255,255,0.05)"/>
+    <!-- Focus ring -->
+    <rect x="115" y="240" width="80" height="16" rx="4" fill="#0C1835"/>
+    <rect x="115" y="240" width="80" height="16" rx="4" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+
+    <!-- Nosepiece -->
+    <ellipse cx="155" cy="308" rx="60" ry="16" fill="#0C1835"/>
+    <ellipse cx="155" cy="308" rx="60" ry="16" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+
+    <!-- Objective lenses -->
+    <!-- Short objective -->
+    <rect x="90"  y="316" width="18" height="40" rx="7" fill="#0A1530"/>
+    <rect x="90"  y="316" width="18" height="40" rx="7" fill="none" stroke="rgba(59,155,232,0.25)" stroke-width="1"/>
+    <ellipse cx="99" cy="356" rx="7" ry="4" fill="#3B9BE8" opacity="0.4"/>
+    <!-- Medium objective (active, green) -->
+    <rect x="146" y="312" width="18" height="58" rx="7" fill="#0A1530"/>
+    <rect x="146" y="312" width="18" height="58" rx="7" fill="none" stroke="#3EBD41" stroke-width="1.5"/>
+    <ellipse cx="155" cy="370" rx="7" ry="4" fill="#3EBD41" opacity="0.7" filter="url(#softglow)"/>
+    <!-- Long objective -->
+    <rect x="196" y="316" width="18" height="46" rx="7" fill="#0A1530"/>
+    <rect x="196" y="316" width="18" height="46" rx="7" fill="none" stroke="rgba(59,155,232,0.25)" stroke-width="1"/>
+    <ellipse cx="205" cy="362" rx="7" ry="4" fill="#3B9BE8" opacity="0.4"/>
+
+    <!-- Eyepiece tube -->
+    <rect x="136" y="30" width="38" height="100" rx="7" fill="#0F1E45"/>
+    <rect x="136" y="30" width="38" height="100" rx="7" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <rect x="143" y="38" width="10" height="84" rx="4" fill="rgba(255,255,255,0.05)"/>
+    <!-- Eyepiece cap -->
+    <rect x="128" y="22" width="54" height="18" rx="9" fill="#0C1835"/>
+    <rect x="128" y="22" width="54" height="18" rx="9" fill="none" stroke="rgba(59,155,232,0.35)" stroke-width="1"/>
+    <!-- Eyepiece lens glow -->
+    <ellipse cx="155" cy="26" rx="18" ry="6" fill="#3B9BE8" opacity="0.25" filter="url(#softglow)"/>
+
+    <!-- Light beam from objective down to slide -->
+    <polygon points="151,370 159,370 165,382 145,382" fill="#3EBD41" opacity="0.12"/>
+
+    <!-- Microscope label badge -->
+    <rect x="76" y="450" width="158" height="28" rx="8" fill="rgba(46,171,49,0.12)"/>
+    <rect x="76" y="450" width="158" height="28" rx="8" fill="none" stroke="rgba(46,171,49,0.35)" stroke-width="1"/>
+    <text x="155" y="469" text-anchor="middle" fill="#3EBD41" font-family="'Outfit',sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">NABL CERTIFIED</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TEST TUBES RACK — left of microscope                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(720, 280)" opacity="0.88">
+    <!-- Rack base -->
+    <rect x="0" y="0" width="110" height="14" rx="5" fill="#0F1E45"/>
+    <rect x="0" y="0" width="110" height="14" rx="5" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <rect x="0" y="200" width="110" height="14" rx="5" fill="#0F1E45"/>
+    <rect x="0" y="200" width="110" height="14" rx="5" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <!-- Side bars -->
+    <rect x="5"   y="14" width="6" height="186" rx="3" fill="#0C1835"/>
+    <rect x="99"  y="14" width="6" height="186" rx="3" fill="#0C1835"/>
+
+    <!-- Tube 1 — GREEN (CBC, full) -->
+    <g transform="translate(18, 14)">
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="#0A1530"/>
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <!-- liquid -->
+      <rect x="1" y="45" width="14" height="84" rx="0" fill="url(#liquidGrad)"/>
+      <rect x="1" y="128" width="14" height="2" rx="1" fill="url(#liquidGrad)"/>
+      <!-- cap -->
+      <rect x="-2" y="-4" width="20" height="14" rx="6" fill="#239126"/>
+      <!-- label -->
+      <rect x="-3" y="55" width="22" height="28" rx="2" fill="rgba(255,255,255,0.08)"/>
+      <text x="8" y="66" text-anchor="middle" fill="white" font-family="sans-serif" font-size="5" font-weight="600">CBC</text>
+      <text x="8" y="75" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="sans-serif" font-size="4">Blood</text>
+      <!-- shine -->
+      <rect x="3" y="10" width="3" height="100" rx="1" fill="rgba(255,255,255,0.08)"/>
+    </g>
+
+    <!-- Tube 2 — BLUE (Thyroid, 3/4) -->
+    <g transform="translate(42, 14)">
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="#0A1530"/>
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <rect x="1" y="60" width="14" height="69" rx="0" fill="url(#liquid2)"/>
+      <rect x="1" y="128" width="14" height="2"  rx="1" fill="url(#liquid2)"/>
+      <rect x="-2" y="-4" width="20" height="14" rx="6" fill="#1566B5"/>
+      <rect x="-3" y="68" width="22" height="28" rx="2" fill="rgba(255,255,255,0.08)"/>
+      <text x="8" y="79" text-anchor="middle" fill="white" font-family="sans-serif" font-size="5" font-weight="600">TSH</text>
+      <text x="8" y="88" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="sans-serif" font-size="4">Thyroid</text>
+      <rect x="3" y="10" width="3" height="100" rx="1" fill="rgba(255,255,255,0.08)"/>
+    </g>
+
+    <!-- Tube 3 — AMBER (Glucose, half) -->
+    <g transform="translate(66, 14)">
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="#0A1530"/>
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <rect x="1" y="75" width="14" height="54" rx="0" fill="url(#liquid3)"/>
+      <rect x="1" y="128" width="14" height="2"  rx="1" fill="url(#liquid3)"/>
+      <rect x="-2" y="-4" width="20" height="14" rx="6" fill="#D97706"/>
+      <rect x="-3" y="82" width="22" height="28" rx="2" fill="rgba(255,255,255,0.08)"/>
+      <text x="8" y="93" text-anchor="middle" fill="white" font-family="sans-serif" font-size="5" font-weight="600">LFT</text>
+      <text x="8" y="102" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="sans-serif" font-size="4">Liver</text>
+      <rect x="3" y="10" width="3" height="100" rx="1" fill="rgba(255,255,255,0.08)"/>
+    </g>
+
+    <!-- Tube 4 — GREEN empty -->
+    <g transform="translate(90, 14)">
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="#0A1530"/>
+      <rect x="0" y="0" width="16" height="130" rx="8" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <rect x="1" y="100" width="14" height="29" rx="0" fill="rgba(46,171,49,0.3)"/>
+      <rect x="1" y="128" width="14" height="2"  rx="1" fill="#3EBD41" opacity="0.4"/>
+      <rect x="-2" y="-4" width="20" height="14" rx="6" fill="#239126"/>
+      <rect x="3"  y="10" width="3"  height="100" rx="1" fill="rgba(255,255,255,0.08)"/>
+    </g>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- PETRI DISH / SAMPLE PLATE — bottom center-right                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(1080, 520)" opacity="0.8">
+    <!-- Dish outer -->
+    <ellipse cx="90" cy="45" rx="88" ry="44" fill="#0A1835"/>
+    <ellipse cx="90" cy="45" rx="88" ry="44" fill="none" stroke="rgba(59,155,232,0.35)" stroke-width="1.5"/>
+    <!-- Agar gel surface -->
+    <ellipse cx="90" cy="45" rx="78" ry="36" fill="#0C2040" opacity="0.9"/>
+    <!-- Culture colonies -->
+    <circle cx="72"  cy="38" r="10" fill="rgba(46,171,49,0.25)"/>
+    <circle cx="72"  cy="38" r="6"  fill="rgba(46,171,49,0.4)"/>
+    <circle cx="72"  cy="38" r="3"  fill="#3EBD41" opacity="0.7"/>
+    <circle cx="105" cy="30" r="7"  fill="rgba(59,155,232,0.25)"/>
+    <circle cx="105" cy="30" r="4"  fill="rgba(59,155,232,0.45)"/>
+    <circle cx="105" cy="30" r="2"  fill="#3B9BE8" opacity="0.8"/>
+    <circle cx="88"  cy="56" r="8"  fill="rgba(245,158,11,0.2)"/>
+    <circle cx="88"  cy="56" r="5"  fill="rgba(245,158,11,0.35)"/>
+    <circle cx="88"  cy="56" r="2"  fill="#F59E0B" opacity="0.7"/>
+    <circle cx="115" cy="52" r="5"  fill="rgba(46,171,49,0.2)"/>
+    <circle cx="115" cy="52" r="3"  fill="rgba(46,171,49,0.4)"/>
+    <circle cx="60"  cy="55" r="6"  fill="rgba(59,155,232,0.2)"/>
+    <circle cx="60"  cy="55" r="3"  fill="rgba(59,155,232,0.4)"/>
+    <!-- Lid edge -->
+    <ellipse cx="90" cy="45" rx="88" ry="44" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="4"/>
+    <!-- Label -->
+    <rect x="28" y="76" width="124" height="20" rx="5" fill="rgba(59,155,232,0.1)"/>
+    <rect x="28" y="76" width="124" height="20" rx="5" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1"/>
+    <text x="90" y="90" text-anchor="middle" fill="#7EC8F8" font-family="'Outfit',sans-serif" font-size="10" font-weight="600" letter-spacing="1">CULTURE PLATE</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- DNA HELIX — far right                                           -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(1330, 60)" opacity="0.6">
+    <path d="M25,0 C65,55 -15,110 25,165 C65,220 -15,275 25,330 C65,385 -15,440 25,495 C65,550 -15,605 25,660 C65,715 -15,770 25,820"
+          fill="none" stroke="#3EBD41" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M75,0 C35,55 115,110 75,165 C35,220 115,275 75,330 C35,385 115,440 75,495 C35,550 115,605 75,660 C35,715 115,770 75,820"
+          fill="none" stroke="#3B9BE8" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Rungs with node dots -->
+    <line x1="25" y1="20"  x2="75" y2="24"  stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="20"  r="4" fill="#3EBD41"/><circle cx="75" cy="24"  r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="55"  x2="90" y2="55"  stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="55"  r="4" fill="#3EBD41"/><circle cx="90" cy="55"  r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="90"  x2="75" y2="86"  stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="90"  r="4" fill="#3EBD41"/><circle cx="75" cy="86"  r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="125" x2="90" y2="125" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="125" r="4" fill="#3EBD41"/><circle cx="90" cy="125" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="165" x2="75" y2="165" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="165" r="4" fill="#3EBD41"/><circle cx="75" cy="165" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="200" x2="90" y2="204" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="200" r="4" fill="#3EBD41"/><circle cx="90" cy="204" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="238" x2="75" y2="234" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="238" r="4" fill="#3EBD41"/><circle cx="75" cy="234" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="275" x2="90" y2="275" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="275" r="4" fill="#3EBD41"/><circle cx="90" cy="275" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="330" x2="75" y2="330" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="330" r="4" fill="#3EBD41"/><circle cx="75" cy="330" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="370" x2="90" y2="374" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="370" r="4" fill="#3EBD41"/><circle cx="90" cy="374" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="408" x2="75" y2="404" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="408" r="4" fill="#3EBD41"/><circle cx="75" cy="404" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="445" x2="90" y2="445" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="445" r="4" fill="#3EBD41"/><circle cx="90" cy="445" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="495" x2="75" y2="495" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="495" r="4" fill="#3EBD41"/><circle cx="75" cy="495" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="535" x2="90" y2="539" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="535" r="4" fill="#3EBD41"/><circle cx="90" cy="539" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="575" x2="75" y2="571" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="575" r="4" fill="#3EBD41"/><circle cx="75" cy="571" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="612" x2="90" y2="612" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="612" r="4" fill="#3EBD41"/><circle cx="90" cy="612" r="4" fill="#3B9BE8"/>
+    <line x1="25" y1="660" x2="75" y2="660" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="25" cy="660" r="4" fill="#3EBD41"/><circle cx="75" cy="660" r="4" fill="#3B9BE8"/>
+    <line x1="10" y1="700" x2="90" y2="704" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+    <circle cx="10" cy="700" r="4" fill="#3EBD41"/><circle cx="90" cy="704" r="4" fill="#3B9BE8"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- FLOATING LAB TEST REPORT CARD                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(1140, 90)" opacity="0.82">
+    <!-- Card shadow -->
+    <rect x="4" y="4" width="168" height="220" rx="14" fill="rgba(0,0,0,0.35)"/>
+    <!-- Card body -->
+    <rect x="0" y="0" width="168" height="220" rx="14" fill="#0D1F45"/>
+    <rect x="0" y="0" width="168" height="220" rx="14" fill="none" stroke="rgba(59,155,232,0.3)" stroke-width="1.5"/>
+    <!-- Card header -->
+    <rect x="0" y="0" width="168" height="46" rx="14" fill="#0F2550"/>
+    <rect x="0" y="32" width="168" height="14" fill="#0F2550"/>
+    <rect x="0" y="46" width="168" height="1"  fill="rgba(59,155,232,0.3)"/>
+    <!-- Header icon circle -->
+    <circle cx="22" cy="23" r="12" fill="rgba(46,171,49,0.2)"/>
+    <circle cx="22" cy="23" r="12" fill="none" stroke="rgba(46,171,49,0.5)" stroke-width="1"/>
+    <!-- Cross icon inside -->
+    <line x1="22" y1="17" x2="22" y2="29" stroke="#3EBD41" stroke-width="2" stroke-linecap="round"/>
+    <line x1="16" y1="23" x2="28" y2="23" stroke="#3EBD41" stroke-width="2" stroke-linecap="round"/>
+    <!-- Header text -->
+    <text x="40" y="19" fill="white" font-family="'Outfit',sans-serif" font-size="10" font-weight="700">Lab Report</text>
+    <text x="40" y="33" fill="rgba(255,255,255,0.45)" font-family="sans-serif" font-size="8">Patient ID: VHL-2024-089</text>
+    <!-- Status badge -->
+    <rect x="108" y="12" width="48" height="18" rx="6" fill="rgba(46,171,49,0.2)"/>
+    <rect x="108" y="12" width="48" height="18" rx="6" fill="none" stroke="rgba(46,171,49,0.5)" stroke-width="1"/>
+    <circle cx="116" cy="21" r="3" fill="#3EBD41"/>
+    <text x="121" y="25" fill="#3EBD41" font-family="'Outfit',sans-serif" font-size="8" font-weight="700">READY</text>
+
+    <!-- Test rows -->
+    <!-- Row 1 — Hemoglobin -->
+    <text x="14" y="68"  fill="rgba(255,255,255,0.55)" font-family="sans-serif" font-size="8">Hemoglobin</text>
+    <text x="14" y="80"  fill="white" font-family="'Outfit',sans-serif" font-size="11" font-weight="700">14.2 g/dL</text>
+    <rect x="100" y="64" width="54" height="16" rx="5" fill="rgba(46,171,49,0.15)"/>
+    <text x="127" y="75" text-anchor="middle" fill="#3EBD41" font-family="'Outfit',sans-serif" font-size="8" font-weight="700">Normal</text>
+    <rect x="14" y="86" width="140" height="1" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Row 2 — Glucose -->
+    <text x="14" y="99"  fill="rgba(255,255,255,0.55)" font-family="sans-serif" font-size="8">Blood Glucose</text>
+    <text x="14" y="111" fill="white" font-family="'Outfit',sans-serif" font-size="11" font-weight="700">98 mg/dL</text>
+    <rect x="100" y="95" width="54" height="16" rx="5" fill="rgba(46,171,49,0.15)"/>
+    <text x="127" y="106" text-anchor="middle" fill="#3EBD41" font-family="'Outfit',sans-serif" font-size="8" font-weight="700">Normal</text>
+    <rect x="14" y="117" width="140" height="1" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Row 3 — TSH (flagged) -->
+    <text x="14" y="130" fill="rgba(255,255,255,0.55)" font-family="sans-serif" font-size="8">TSH (Thyroid)</text>
+    <text x="14" y="142" fill="white" font-family="'Outfit',sans-serif" font-size="11" font-weight="700">5.8 mIU/L</text>
+    <rect x="100" y="126" width="54" height="16" rx="5" fill="rgba(245,158,11,0.15)"/>
+    <text x="127" y="137" text-anchor="middle" fill="#F59E0B" font-family="'Outfit',sans-serif" font-size="8" font-weight="700">High ↑</text>
+    <rect x="14" y="148" width="140" height="1" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Row 4 — Vitamin D -->
+    <text x="14" y="161" fill="rgba(255,255,255,0.55)" font-family="sans-serif" font-size="8">Vitamin D</text>
+    <text x="14" y="173" fill="white" font-family="'Outfit',sans-serif" font-size="11" font-weight="700">18 ng/mL</text>
+    <rect x="100" y="157" width="54" height="16" rx="5" fill="rgba(239,68,68,0.15)"/>
+    <text x="127" y="168" text-anchor="middle" fill="#F87171" font-family="'Outfit',sans-serif" font-size="8" font-weight="700">Low ↓</text>
+    <rect x="14" y="179" width="140" height="1" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Footer -->
+    <text x="14" y="198" fill="rgba(255,255,255,0.3)" font-family="sans-serif" font-size="7.5">Vigsan Healthcare Labs · Pune</text>
+    <!-- Download button -->
+    <rect x="14" y="203" width="140" height="12" rx="4" fill="rgba(59,155,232,0.12)"/>
+    <text x="84" y="213" text-anchor="middle" fill="#7EC8F8" font-family="'Outfit',sans-serif" font-size="7.5" font-weight="600">↓ Download PDF Report</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- MOLECULE NETWORK — between tubes and microscope                 -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g transform="translate(820, 500)" opacity="0.45">
+    <line x1="40"  y1="30"  x2="90"  y2="10"  stroke="#3B9BE8" stroke-width="1.2"/>
+    <line x1="40"  y1="30"  x2="10"  y2="70"  stroke="#3EBD41" stroke-width="1.2"/>
+    <line x1="40"  y1="30"  x2="80"  y2="65"  stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+    <line x1="90"  y1="10"  x2="130" y2="35"  stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+    <line x1="80"  y1="65"  x2="130" y2="35"  stroke="#3EBD41" stroke-width="1.2"/>
+    <line x1="80"  y1="65"  x2="65"  y2="105" stroke="#3B9BE8" stroke-width="1.2"/>
+    <line x1="10"  y1="70"  x2="65"  y2="105" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+    <circle cx="40"  cy="30"  r="8" fill="#3B9BE8"  opacity="0.9"/>
+    <circle cx="40"  cy="30"  r="4" fill="white"    opacity="0.5"/>
+    <circle cx="90"  cy="10"  r="6" fill="#3EBD41"  opacity="0.9"/>
+    <circle cx="90"  cy="10"  r="3" fill="white"    opacity="0.5"/>
+    <circle cx="10"  cy="70"  r="9" fill="#3B9BE8"  opacity="0.85"/>
+    <circle cx="10"  cy="70"  r="4" fill="white"    opacity="0.45"/>
+    <circle cx="80"  cy="65"  r="6" fill="white"    opacity="0.2"/>
+    <circle cx="130" cy="35"  r="8" fill="#3EBD41"  opacity="0.9"/>
+    <circle cx="130" cy="35"  r="4" fill="white"    opacity="0.45"/>
+    <circle cx="65"  cy="105" r="7" fill="#3B9BE8"  opacity="0.85"/>
+    <circle cx="65"  cy="105" r="3" fill="white"    opacity="0.4"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ECG / HEARTBEAT LINE — bottom                                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <g opacity="0.35" filter="url(#softglow)">
+    <polyline points="680,760 740,760 762,720 776,800 790,760 850,760 870,748 878,726 886,772 894,760 960,760 982,745 992,710 1002,795 1012,760 1080,760 1098,752 1106,728 1114,780 1122,760 1200,760 1218,748 1226,718 1234,790 1242,760 1310,760"
+      fill="none" stroke="#3EBD41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Pulse dot -->
+    <circle cx="1012" cy="760" r="5" fill="#3EBD41" opacity="0.8"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- LEFT FADE — keeps headline text readable                        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <rect x="0" y="0" width="1440" height="820" fill="url(#fadeLeft)"/>
+</svg>
