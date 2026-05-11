@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* ── Custom design tokens ───────────────────────────────────────────── */
+@theme {
+  --color-teal-50:  #E8F8F6;
+  --color-teal-100: #C4EDE8;
+  --color-teal-200: #8DDDD3;
+  --color-teal-300: #4ECABB;
+  --color-teal-400: #25B5A3;
+  --color-teal-500: #0EA38F;
+  --color-teal-600: #0A8B79;
+  --color-teal-700: #0B7B6E;
+  --color-teal-800: #086358;
+  --color-teal-900: #053F38;
+  --color-teal-950: #021F1C;
+  --color-amber-50:  #FEF3E4;
+  --color-amber-100: #FDDFB8;
+  --color-amber-500: #E8760A;
+  --color-amber-600: #C45E08;
+  --color-amber-700: #9E4906;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4,0,0.6,1) infinite;
+}
+
+/* Nuxt UI primary colour mapping */
+:root {
+  --ui-primary: var(--color-teal-600);
+  --ui-primary-50:  var(--color-teal-50);
+  --ui-primary-100: var(--color-teal-100);
+  --ui-primary-500: var(--color-teal-500);
+  --ui-primary-600: var(--color-teal-600);
+  --ui-primary-700: var(--color-teal-700);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: #FAFFFE;
+  color: #1A3530;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.2; }
+
+.section-pad   { @apply py-16 md:py-24; }
+.container-pad { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.discount-badge { @apply absolute top-3 right-3 bg-amber-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-lg; font-family: var(--font-heading); }
+.admin-nav-link { @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm transition-all duration-150 text-gray-500 hover:bg-gray-50 hover:text-gray-800 w-full; }
+.admin-nav-link.active { @apply bg-teal-50 text-teal-700 font-medium; }
+.skeleton { @apply bg-gray-100 rounded-xl animate-pulse; }
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-teal-200); border-radius: 3px; }
+.page-enter-active, .page-leave-active { transition: opacity 0.2s ease; }
+.page-enter-from, .page-leave-to { opacity: 0; }

@@ -1,0 +1,241 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  /* ── Vigsan brand palette (from logo) ── */
+  --color-navy-50:  #EEF1F8;
+  --color-navy-100: #CDD5EB;
+  --color-navy-200: #9BAED6;
+  --color-navy-300: #6987C1;
+  --color-navy-400: #3D63AE;
+  --color-navy-500: #2A4E9A;
+  --color-navy-600: #1C3D8A;
+  --color-navy-700: #1C2D5E;
+  --color-navy-800: #142247;
+  --color-navy-900: #0C1630;
+  --color-navy-950: #060B1A;
+
+  --color-green-50:  #EDFAEE;
+  --color-green-100: #D0F2D1;
+  --color-green-200: #9FE4A1;
+  --color-green-300: #65CF68;
+  --color-green-400: #3EBD41;
+  --color-green-500: #2EAB31;
+  --color-green-600: #239126;
+  --color-green-700: #1A741D;
+  --color-green-800: #125514;
+  --color-green-900: #0A380B;
+
+  --color-sky-400: #3B9BE8;
+  --color-sky-500: #2280D2;
+  --color-sky-600: #1566B5;
+
+  --color-amber-500: #F59E0B;
+  --color-amber-600: #D97706;
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+:root {
+  --ui-primary: var(--color-green-500);
+  --ui-primary-50:  var(--color-green-50);
+  --ui-primary-100: var(--color-green-100);
+  --ui-primary-500: var(--color-green-500);
+  --ui-primary-600: var(--color-green-600);
+  --ui-primary-700: var(--color-green-700);
+
+  /* semantic aliases */
+  --brand-navy:  #1C2D5E;
+  --brand-green: #2EAB31;
+  --brand-sky:   #3B9BE8;
+  --brand-light: #F4F9FF;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: #F4F9FF;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; line-height: 1.15; }
+
+/* ── Layout ── */
+.section-pad   { @apply py-10 md:py-15; }
+.container-pad { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* ── Hero mesh background ── */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 85% 65% at 0% 55%, rgba(28,45,94,0.95) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 85% 10%, rgba(46,171,49,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 55% 50% at 55% 100%, rgba(59,155,232,0.15) 0%, transparent 65%),
+    linear-gradient(140deg, #060B1A 0%, #0C1630 35%, #142247 65%, #1C2D5E 100%);
+}
+
+/* ── Dot grid overlay ── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Section label pill ── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-green);
+}
+.section-label::before {
+  content: '';
+  width: 22px; height: 2.5px;
+  background: linear-gradient(90deg, var(--brand-green), #65CF68);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Premium card ── */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(28,45,94,0.07);
+  box-shadow: 0 2px 16px rgba(28,45,94,0.06), 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: 0 20px 56px rgba(28,45,94,0.14), 0 6px 20px rgba(0,0,0,0.07);
+  transform: translateY(-4px);
+}
+
+/* ── Stat pill (hero) ── */
+.stat-pill {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+/* ── Trust chip ── */
+.trust-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: #fff;
+  border: 1px solid rgba(28,45,94,0.08);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(28,45,94,0.06);
+}
+
+/* ── Icon box ── */
+.icon-box {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #EDFAEE, #D0F2D1);
+}
+.icon-box-navy {
+  background: linear-gradient(135deg, #EEF1F8, #CDD5EB);
+}
+
+/* ── Gradient text ── */
+.gradient-text-green {
+  background: linear-gradient(135deg, #3EBD41, #65CF68);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-sky {
+  background: linear-gradient(135deg, #3B9BE8, #7EC8F8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow button ── */
+.btn-green-glow {
+  box-shadow: 0 4px 24px rgba(46,171,49,0.38);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-green-glow:hover {
+  box-shadow: 0 8px 40px rgba(46,171,49,0.55);
+  transform: translateY(-2px);
+}
+
+/* ── Discount badge ── */
+.discount-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(245,158,11,0.4);
+  z-index: 10;
+}
+
+/* ── Admin ── */
+.admin-nav-link { @apply flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm transition-all duration-150 text-gray-500 hover:bg-gray-50 hover:text-gray-800 w-full; }
+.admin-nav-link.active { @apply bg-green-50 text-green-700 font-medium; }
+
+/* ── Skeleton shimmer ── */
+.skeleton {
+  background: linear-gradient(90deg, #E8EEF8 25%, #D4DFEE 50%, #E8EEF8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: 16px;
+}
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #9BAED6; border-radius: 3px; }
+
+/* ── Page / fade transitions ── */
+.page-enter-active,.page-leave-active { transition: opacity 0.22s ease, transform 0.22s ease; }
+.page-enter-from,.page-leave-to { opacity:0; transform:translateY(8px); }
+.fade-enter-active,.fade-leave-active { transition: opacity 0.22s ease; }
+.fade-enter-from,.fade-leave-to { opacity:0; }
+
+/* ── Slide-down (mobile menu) ── */
+.slide-down-enter-active,.slide-down-leave-active { transition: all 0.25s ease; }
+.slide-down-enter-from,.slide-down-leave-to { opacity:0; transform:translateY(-8px); }
+
+/* ── Float animations ── */
+@keyframes float-a { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-18px) rotate(4deg)} }
+@keyframes float-b { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-12px) scale(1.06)} }
+.float-a { animation: float-a 7s ease-in-out infinite; }
+.float-b { animation: float-b 5s ease-in-out infinite 1.2s; }
+
+/* ── Number counter accent ── */
+.stat-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1;
+}
+.stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); margin-top: 4px; letter-spacing: 0.04em; }
+
+/* ── Step connector ── */
+.step-line {
+  position: absolute;
+  top: 28px; left: calc(50% + 32px);
+  width: calc(100% - 64px); height: 1px;
+  background: linear-gradient(90deg, #9BAED6 0%, transparent 100%);
+}
