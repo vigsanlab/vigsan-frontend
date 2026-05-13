@@ -61,11 +61,11 @@
             <div class="space-y-2">
               <div class="flex justify-between text-xs">
                 <span class="text-gray-500">Monday – Saturday</span>
-                <span class="font-semibold" style="color: #1C2D5E;">7:00 AM – 8:00 PM</span>
+                <span class="font-semibold" style="color: #1C2D5E;">6:00 AM – 8:00 PM</span>
               </div>
               <div class="flex justify-between text-xs">
                 <span class="text-gray-500">Sunday</span>
-                <span class="font-semibold" style="color: #1C2D5E;">8:00 AM – 2:00 PM</span>
+                <span class="font-semibold" style="color: #1C2D5E;">6:00 AM – 8:00 PM</span>
               </div>
             </div>
             <div class="flex items-center gap-2 mt-3 pt-3" style="border-top: 1px solid rgba(28,45,94,0.08);">
