@@ -1,41 +1,41 @@
 <template>
   <div>
-    <!-- ══ HERO ══════════════════════════════════════════════════════ -->
+    <!-- ══ HERO ════════════════════════════════════════════════════════ -->
     <section class="relative overflow-hidden" style="min-height: 88vh; display: flex; flex-direction: column; justify-content: center; background: #060B1A;">
-      <!-- SVG medical illustration background -->
       <div class="absolute inset-0 pointer-events-none"
         style="background-image: url('/hero-bg.svg'); background-size: cover; background-position: center right; background-repeat: no-repeat;" />
-
-      <!-- Left-side dark fade so text stays crisp -->
       <div class="absolute inset-0 pointer-events-none"
         style="background: linear-gradient(100deg, rgba(6,11,26,0.92) 0%, rgba(6,11,26,0.75) 45%, rgba(6,11,26,0.15) 75%, transparent 100%);" />
 
       <div class="container-pad relative py-20 md:py-28">
         <div class="max-w-3xl">
           <!-- Live pill -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-xs font-semibold"
-            style="background: rgba(46,171,49,0.15); border: 1px solid rgba(46,171,49,0.3); color: #65CF68;">
-            <span class="w-2 h-2 rounded-full animate-pulse" style="background: #3EBD41;"></span>
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-8 text-xs font-semibold relative"
+            style="background: rgba(46,171,49,0.12); border: 1px solid rgba(46,171,49,0.3); color: #65CF68;">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="ping-slow absolute inline-flex h-full w-full rounded-full" style="background: #3EBD41;"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5" style="background: #3EBD41;"></span>
+            </span>
             Serving Pune &amp; surrounding areas
           </div>
 
           <!-- Headline -->
           <h1 class="font-[family-name:var(--font-heading)] font-black text-white leading-tight mb-6"
-            style="font-size: clamp(2.5rem, 6vw, 4.2rem);">
+            style="font-size: clamp(2.5rem, 6vw, 4.5rem);">
             Lab tests that come<br />
             <span class="gradient-text-green">to your doorstep</span>
           </h1>
           <p class="text-lg md:text-xl leading-relaxed mb-10 max-w-xl" style="color: rgba(255,255,255,0.65);">
-            Certified partner labs. Free home sample collection.<br class="hidden md:block" /> Accurate results delivered online — within 24 hours.
+            Certified partner labs. Free home sample collection.<br class="hidden md:block" />
+            Accurate results delivered online — within 24 hours.
           </p>
 
           <!-- CTA row -->
-          <div class="flex flex-col sm:flex-row gap-4">
+          <div class="flex flex-col sm:flex-row gap-4 mb-12">
             <NuxtLink to="/tests"
               class="btn-green-glow inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-bold text-white"
               style="background: linear-gradient(135deg, #2EAB31, #239126); font-family: var(--font-heading);">
-              View All Tests
-              <ArrowRight :size="16" />
+              View All Tests <ArrowRight :size="16" />
             </NuxtLink>
             <NuxtLink to="/contact"
               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-semibold text-white transition-all"
@@ -46,13 +46,13 @@
             </NuxtLink>
           </div>
 
-          <!-- Partner logos strip -->
-          <div class="mt-12 flex items-center gap-4 flex-wrap">
-            <p class="text-xs font-semibold uppercase tracking-wider" style="color: rgba(255,255,255,0.35);">Processed by</p>
+          <!-- Partner strip -->
+          <div class="flex items-center gap-4 flex-wrap">
+            <p class="text-xs font-semibold uppercase tracking-wider" style="color: rgba(255,255,255,0.3);">Processed by</p>
             <div class="flex gap-3 flex-wrap">
-              <span v-for="lab in ['SRL', 'Thyrocare', 'Metropolis']" :key="lab"
+              <span v-for="lab in ['Thyrocare', 'Metropolis']" :key="lab"
                 class="px-3 py-1.5 rounded-lg text-xs font-bold"
-                style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.12);">
+                style="background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.55); border: 1px solid rgba(255,255,255,0.1);">
                 {{ lab }}
               </span>
             </div>
@@ -60,15 +60,13 @@
         </div>
       </div>
 
-      <!-- Stats bar — animated counters -->
-      <div ref="statsRef" style="background: rgba(0,0,0,0.25); border-top: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(8px);">
+      <!-- Stats bar -->
+      <div ref="statsRef" style="background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255,255,255,0.07); backdrop-filter: blur(10px);">
         <div class="container-pad py-6">
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div v-for="(stat, i) in stats" :key="stat.label" class="stat-pill">
               <p class="stat-number">
-                <template v-if="stat.static">
-                  <span>{{ stat.staticValue }}</span>
-                </template>
+                <template v-if="stat.static"><span>{{ stat.staticValue }}</span></template>
                 <template v-else>
                   <span>{{ stat.prefix }}</span>
                   <span>{{ (displayValues[i] as number).toLocaleString('en-IN') }}</span>
@@ -82,11 +80,42 @@
       </div>
     </section>
 
-    <!-- ══ TRUST CHIPS ═══════════════════════════════════════════════ -->
+    <!-- ══ HERO BANNER CAROUSEL ══════════════════════════════════════════ -->
+    <HeroBannerCarousel />
+
+    <!-- ══ PROMO CARDS CAROUSEL ══════════════════════════════════════════ -->
+    <section class="section-pad bg-white">
+      <div class="container-pad">
+        <div class="flex items-end justify-between mb-8 reveal">
+          <div>
+            <p class="section-label mb-3">Why Vigsan</p>
+            <h2 class="font-[family-name:var(--font-heading)] font-black text-gray-900" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">
+              Everything you need from a lab
+            </h2>
+          </div>
+        </div>
+        <PromoCarousel />
+      </div>
+    </section>
+
+    <!-- ══ TEST MARQUEE TICKER ══════════════════════════════════════════ -->
+    <div class="overflow-hidden py-3 border-y" style="background: #0C1630; border-color: rgba(46,171,49,0.15);">
+      <div class="marquee-track">
+        <span v-for="test in [...tickerTests, ...tickerTests]" :key="Math.random()"
+          class="inline-flex items-center gap-2 mx-6 text-xs font-semibold whitespace-nowrap"
+          style="color: rgba(255,255,255,0.5);">
+          <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background: #2EAB31;"></span>
+          {{ test }}
+        </span>
+      </div>
+    </div>
+
+    <!-- ══ TRUST CHIPS ══════════════════════════════════════════════════ -->
     <section class="bg-white border-b" style="border-color: rgba(28,45,94,0.08);">
       <div class="container-pad py-7">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div v-for="badge in trustBadges" :key="badge.title" class="trust-chip">
+          <div v-for="(badge, i) in trustBadges" :key="badge.title"
+            class="trust-chip reveal" :class="`reveal-delay-${i+1}`">
             <div class="icon-box">
               <component :is="badge.icon" :size="20" style="color: #2EAB31;" />
             </div>
@@ -99,10 +128,10 @@
       </div>
     </section>
 
-    <!-- ══ FEATURED TESTS ════════════════════════════════════════════ -->
+    <!-- ══ FEATURED TESTS ══════════════════════════════════════════════ -->
     <section class="section-pad" style="background: #F4F9FF;">
       <div class="container-pad">
-        <div class="flex items-end justify-between mb-12">
+        <div class="flex items-end justify-between mb-12 reveal">
           <div>
             <p class="section-label mb-3">Most Booked</p>
             <h2 class="font-[family-name:var(--font-heading)] font-black text-gray-900" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
@@ -115,7 +144,6 @@
             View all <ArrowRight :size="14" />
           </NuxtLink>
         </div>
-
         <div v-if="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <div v-for="i in 6" :key="i" class="skeleton h-64" />
         </div>
@@ -126,10 +154,10 @@
       </div>
     </section>
 
-    <!-- ══ HEALTH PACKAGES ═══════════════════════════════════════════ -->
+    <!-- ══ HEALTH PACKAGES ═════════════════════════════════════════════ -->
     <section class="section-pad bg-white">
       <div class="container-pad">
-        <div class="flex items-end justify-between mb-12">
+        <div class="flex items-end justify-between mb-12 reveal">
           <div>
             <p class="section-label mb-3">Best Value</p>
             <h2 class="font-[family-name:var(--font-heading)] font-black text-gray-900" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
@@ -146,29 +174,29 @@
           <div v-for="i in 3" :key="i" class="skeleton h-52" />
         </div>
         <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <TestCard v-for="pkg in packages" :key="pkg._id" :test="pkg" />
+          <div v-for="(pkg, i) in packages" :key="pkg._id" class="reveal" :class="`reveal-delay-${i+1}`">
+            <TestCard :test="pkg" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ HOW IT WORKS ══════════════════════════════════════════════ -->
+    <!-- ══ HOW IT WORKS ════════════════════════════════════════════════ -->
     <section class="section-pad" style="background: linear-gradient(160deg, #EEF1F8 0%, #F4F9FF 100%);">
       <div class="container-pad">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 reveal">
           <p class="section-label mb-3 justify-center">Simple Process</p>
           <h2 class="font-[family-name:var(--font-heading)] font-black text-gray-900" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
             How It Works
           </h2>
-          <p class="mt-3 text-gray-500 max-w-lg mx-auto">From booking to your doorstep in four simple steps</p>
+          <p class="mt-3 text-gray-500 max-w-lg mx-auto text-sm">From booking to your doorstep in four simple steps</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div v-for="(step, i) in howItWorks" :key="i" class="relative text-center">
-            <!-- Connector line -->
+          <div v-for="(step, i) in howItWorks" :key="i"
+            class="relative text-center reveal" :class="`reveal-delay-${i+1}`">
             <div v-if="i < 3" class="step-line hidden md:block" />
-
-            <!-- Step icon -->
-            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 relative"
-              style="background: linear-gradient(135deg, #1C2D5E, #2A4E9A); box-shadow: 0 8px 24px rgba(28,45,94,0.25);">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 relative"
+              style="background: linear-gradient(135deg, #1C2D5E, #2A4E9A); box-shadow: 0 8px 28px rgba(28,45,94,0.28);">
               <component :is="step.icon" :size="26" color="white" />
               <div class="absolute -top-2 -right-2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black text-white"
                 style="background: linear-gradient(135deg, #2EAB31, #239126); font-family: var(--font-heading);">{{ i + 1 }}</div>
@@ -180,18 +208,18 @@
       </div>
     </section>
 
-    <!-- ══ WHY VIGSAN (feature strip) ════════════════════════════════ -->
+    <!-- ══ WHY VIGSAN ══════════════════════════════════════════════════ -->
     <section class="section-pad bg-white">
       <div class="container-pad">
-        <div class="text-center mb-14">
+        <div class="text-center mb-14 reveal">
           <p class="section-label mb-3 justify-center">Why Choose Us</p>
           <h2 class="font-[family-name:var(--font-heading)] font-black text-gray-900" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">
             The Vigsan Difference
           </h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div v-for="feat in features" :key="feat.title"
-            class="flex gap-4 p-5 rounded-2xl border transition-all"
+          <div v-for="(feat, i) in features" :key="feat.title"
+            class="flex gap-4 p-5 rounded-2xl border transition-all reveal" :class="`reveal-delay-${(i % 3) + 1}`"
             style="border-color: rgba(28,45,94,0.08); background: #F4F9FF;">
             <div class="icon-box flex-shrink-0">
               <component :is="feat.icon" :size="20" style="color: #2EAB31;" />
@@ -205,29 +233,41 @@
       </div>
     </section>
 
-    <!-- ══ CTA BANNER ════════════════════════════════════════════════ -->
+    <!-- ══ REVIEWS CAROUSEL ══════════════════════════════════════════ -->
+    <ReviewsCarousel />
+
+    <!-- ══ CTA BANNER ══════════════════════════════════════════════════ -->
     <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #1C2D5E 0%, #0C1630 100%);">
-      <div class="dot-grid absolute inset-0 pointer-events-none opacity-50" />
+      <div class="absolute inset-0 pointer-events-none"
+        style="background-image: url('/hero-bg.svg'); background-size: cover; background-position: center; opacity: 0.07;" />
       <div class="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none opacity-10"
         style="background: radial-gradient(circle, #2EAB31, transparent); filter: blur(60px); transform: translate(30%, -30%);" />
-      <div class="container-pad relative py-16 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div>
+      <div class="container-pad relative py-20 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="reveal">
           <p class="section-label mb-3" style="color: #65CF68;">Get Started Today</p>
-          <h2 class="font-[family-name:var(--font-heading)] font-black text-white text-3xl md:text-4xl mb-2">
-            Ready to book your test?
+          <h2 class="font-[family-name:var(--font-heading)] font-black text-white mb-3"
+            style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+            Book your test in<br />under 2 minutes
           </h2>
-          <p style="color: rgba(255,255,255,0.55);">Call us or send an enquiry — we handle everything else.</p>
+          <p class="text-sm max-w-md" style="color: rgba(255,255,255,0.55);">
+            Call us, WhatsApp, or send an online enquiry. Our team schedules your home pickup and handles everything else.
+          </p>
         </div>
-        <div class="flex gap-3 flex-shrink-0 flex-wrap">
+        <div class="flex flex-col gap-3 flex-shrink-0 reveal reveal-delay-2">
           <a :href="`tel:${(config.public.labPhone as string).replace(/\s/g,'')}`"
-            class="btn-green-glow inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-bold text-white"
+            class="btn-green-glow inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-bold text-white"
             style="background: linear-gradient(135deg, #2EAB31, #239126); font-family: var(--font-heading);">
-            <Phone :size="16" /> Call Now
+            <Phone :size="16" /> Call {{ config.public.labPhone }}
+          </a>
+          <a :href="`https://wa.me/${(config.public.labPhone as string).replace(/[^0-9]/g,'')}`" target="_blank"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-bold text-white transition-all"
+            style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 4px 20px rgba(37,211,102,0.3);">
+            <MessageCircle :size="16" /> WhatsApp Us
           </a>
           <NuxtLink to="/contact"
-            class="inline-flex items-center gap-2 px-7 py-4 rounded-2xl text-base font-semibold text-white transition-all"
-            style="background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2);">
-            Enquire
+            class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-2xl text-sm font-semibold text-white transition-all text-center"
+            style="background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.18);">
+            Send Online Enquiry
           </NuxtLink>
         </div>
       </div>
@@ -238,6 +278,7 @@
 <script setup lang="ts">
 import { ArrowRight, Phone, HomeIcon, ShieldCheck, BarChart3, Tag, Search, ClipboardList, Home, FileText, Clock, MessageCircle, Award } from 'lucide-vue-next'
 useHead({ title: 'Vigsan Healthcare Labs — Trusted Lab Tests at Your Doorstep' })
+useReveal()
 
 const config = useRuntimeConfig()
 const { get } = useApi()
@@ -246,19 +287,17 @@ const loading = ref(true)
 const featuredTests = ref<any[]>([])
 const packages = ref<any[]>([])
 
-// ── Animated counter stats ──────────────────────────────────────
+// ── Animated counter stats ─────────────────────────────────────
 const stats = [
-  { target: 500,   prefix: '',  suffix: '+',    label: 'Tests Available', static: false },
-  { target: 10000, prefix: '',  suffix: '+',    label: 'Happy Patients',  static: false },
-  { target: null,  prefix: '',  suffix: '',     label: 'Report Delivery', static: true, staticValue: '24–72h' },
-  { target: 100,   prefix: '',  suffix: '%',    label: 'Certified Labs',  static: false },
+  { target: 500,   prefix: '',  suffix: '+', label: 'Tests Available', static: false },
+  { target: 10000, prefix: '',  suffix: '+', label: 'Happy Patients',  static: false },
+  { target: null,  prefix: '',  suffix: '',  label: 'Report Delivery', static: true, staticValue: '6–72h' },
+  { target: 100,   prefix: '',  suffix: '%', label: 'Certified Labs',  static: false },
 ]
 const displayValues = ref(stats.map((s) => s.static ? s.staticValue : 0))
 const statsRef = ref<HTMLElement | null>(null)
 const hasCounted = ref(false)
-
 const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4)
-
 const runCounters = () => {
   if (hasCounted.value) return
   hasCounted.value = true
@@ -276,31 +315,64 @@ const runCounters = () => {
   }
   requestAnimationFrame(tick)
 }
-
 const { stop } = useIntersectionObserver(
   statsRef,
   ([entry]) => { if (entry.isIntersecting) { runCounters(); stop() } },
   { threshold: 0.3 }
 )
+
+// ── Marquee tests ──────────────────────────────────────────────
+const tickerTests = [
+  'Complete Blood Count (CBC)', 'Thyroid Profile (TSH, T3, T4)', 'HbA1c — Diabetes Check',
+  'Vitamin D & B12', 'Liver Function Test (LFT)', 'Kidney Function Test (KFT)',
+  'Lipid Profile', 'Full Body Health Checkup', 'Urine Routine', 'Iron Studies',
+  'Dengue NS1 Antigen', 'COVID Antibody Test', 'Hormone Panel', 'Bone Profile',
+  'Cardiac Risk Markers', 'PSA — Prostate Screen', 'PCOS Panel', 'Allergy Profile',
+]
+
+// ── Trust badges ───────────────────────────────────────────────
 const trustBadges = [
-  { title: 'Free Home Collection', sub: 'We come to you',         icon: HomeIcon    },
-  { title: 'NABL Certified Labs',  sub: 'Nationally accredited',  icon: ShieldCheck },
-  { title: 'Online Reports',       sub: 'Results via email',      icon: BarChart3   },
-  { title: 'Affordable Pricing',   sub: 'Up to 60% off MRP',      icon: Tag         },
+  { title: 'Free Home Collection', sub: 'We come to you',        icon: HomeIcon    },
+  { title: 'NABL Certified Labs',  sub: 'Nationally accredited', icon: ShieldCheck },
+  { title: 'Online Reports',       sub: 'Results via email',     icon: BarChart3   },
+  { title: 'Affordable Pricing',   sub: 'Up to 60% off MRP',     icon: Tag         },
 ]
+
+// ── How it works ───────────────────────────────────────────────
 const howItWorks = [
-  { title: 'Choose Your Test',    desc: 'Browse our catalogue or call us for expert guidance.',  icon: Search       },
-  { title: 'Send an Enquiry',     desc: 'Fill a quick form and we schedule your home pickup.',   icon: ClipboardList},
-  { title: 'Home Sample Pickup',  desc: 'Our phlebotomist visits at your preferred time slot.',  icon: Home         },
-  { title: 'Get Results Online',  desc: 'Reports emailed to you within 24–72 hours.',            icon: FileText     },
+  { title: 'Choose Your Test',   desc: 'Browse our catalogue or call us for expert guidance.',  icon: Search        },
+  { title: 'Send an Enquiry',    desc: 'Fill a quick form and we schedule your home pickup.',   icon: ClipboardList },
+  { title: 'Home Sample Pickup', desc: 'Our phlebotomist visits at your preferred time slot.',  icon: Home          },
+  { title: 'Get Results Online', desc: 'Reports emailed to you within 24–72 hours.',            icon: FileText      },
 ]
+
+// ── Features ───────────────────────────────────────────────────
 const features = [
   { title: 'Accuracy Guaranteed',    desc: 'NABL-certified labs using internationally validated testing methods.',   icon: Award         },
   { title: 'Home Sample Collection', desc: 'Trained phlebotomists at your doorstep — any time, any location.',     icon: HomeIcon      },
-  { title: 'Transparent Pricing',    desc: 'No hidden charges. Significant discount from MRP, always.',             icon: Tag           },
-  { title: 'Online Reports',         desc: 'Digital reports delivered to your inbox — no lab visits needed.',       icon: BarChart3     },
-  { title: 'Quick Turnaround',       desc: 'Most reports ready within 24–48 hours of sample collection.',          icon: Clock         },
-  { title: 'Expert Guidance',        desc: "Not sure which test? Our team will advise you — for free.",             icon: MessageCircle },
+  { title: 'Transparent Pricing',    desc: 'No hidden charges. Significant discount from MRP, always.',            icon: Tag           },
+  { title: 'Online Reports',         desc: 'Digital reports delivered to your inbox — no lab visits needed.',      icon: BarChart3     },
+  { title: 'Quick Turnaround',       desc: 'Most reports ready within 24–48 hours of sample collection.',         icon: Clock         },
+  { title: 'Expert Guidance',        desc: "Not sure which test? Our team will advise you — for free.",            icon: MessageCircle },
+]
+
+// ── Testimonials ───────────────────────────────────────────────
+const testimonials = [
+  {
+    name: 'Priya Sharma', location: 'Kothrud, Pune', test: 'Full Body Checkup',
+    text: 'The phlebotomist arrived right on time at 7 AM. Reports were in my inbox by evening. Incredibly smooth experience — will definitely book again.',
+    color1: '#1C2D5E', color2: '#2A4E9A',
+  },
+  {
+    name: 'Rahul Deshmukh', location: 'Baner, Pune', test: 'Thyroid Profile',
+    text: 'Prices are almost 50% less than the local lab near my house. Same NABL quality, much more convenient. Vigsan has become my go-to for all tests.',
+    color1: '#2EAB31', color2: '#239126',
+  },
+  {
+    name: 'Anjali Kulkarni', location: 'Hinjewadi, Pune', test: 'Diabetes Panel',
+    text: "My elderly mother can't travel easily. Vigsan's home collection is a blessing. The staff was very polite and professional. Highly recommended!",
+    color1: '#1566B5', color2: '#3B9BE8',
+  },
 ]
 
 onMounted(async () => {

@@ -239,3 +239,100 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); font-weight: 700; line-hei
   width: calc(100% - 64px); height: 1px;
   background: linear-gradient(90deg, #9BAED6 0%, transparent 100%);
 }
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ── Marquee ticker ── */
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 28s linear infinite; display: flex; width: max-content; }
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ── Testimonial card ── */
+.testimonial-card {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(28,45,94,0.08);
+  box-shadow: 0 2px 16px rgba(28,45,94,0.06);
+  padding: 28px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.testimonial-card:hover {
+  box-shadow: 0 16px 48px rgba(28,45,94,0.13);
+  transform: translateY(-3px);
+}
+
+/* ── Star rating ── */
+.star-filled { color: #F59E0B; }
+
+/* ── Gradient border card ── */
+.card-gradient-border {
+  position: relative;
+  border-radius: 20px;
+  background: #fff;
+}
+.card-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(28,45,94,0.15), rgba(46,171,49,0.25), rgba(59,155,232,0.15));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Pulse ring (hero live pill) ── */
+@keyframes ping-slow { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2.2); opacity: 0; } }
+.ping-slow { animation: ping-slow 2s ease-out infinite; }
+
+/* ── Number ticker (counting animation) ── */
+@keyframes countUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.count-anim { animation: countUp 0.3s ease forwards; }
+
+/* ── Banner carousel ── */
+.banner-slide { position: absolute; inset: 0; transition: opacity 0.7s ease, transform 0.7s ease; }
+.banner-slide.active { opacity: 1; transform: translateX(0); z-index: 2; }
+.banner-slide.exit-left { opacity: 0; transform: translateX(-40px); z-index: 1; }
+.banner-slide.enter-right { opacity: 0; transform: translateX(40px); z-index: 1; }
+
+/* ── Promo card carousel ── */
+.promo-track { display: flex; transition: transform 0.55s cubic-bezier(0.4,0,0.2,1); }
+
+/* ── Review carousel ── */
+.review-track { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
+
+/* ── Carousel dot ── */
+.carousel-dot {
+  width: 8px; height: 8px; border-radius: 9999px;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.3s ease; cursor: pointer;
+}
+.carousel-dot.active {
+  width: 24px;
+  background: white;
+}
+.carousel-dot-navy {
+  width: 8px; height: 8px; border-radius: 9999px;
+  background: rgba(28,45,94,0.2);
+  transition: all 0.3s ease; cursor: pointer;
+}
+.carousel-dot-navy.active {
+  width: 24px;
+  background: #1C2D5E;
+}

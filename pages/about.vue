@@ -24,7 +24,7 @@
               Pune's trusted diagnostics<br />coordination service
             </h2>
             <p class="text-gray-600 leading-relaxed mb-4">We manage the entire diagnostic journey — from booking to sample pickup to digital report delivery — so you never have to step out of your home.</p>
-            <p class="text-gray-600 leading-relaxed mb-4">As a third-party collection and coordination partner, we work exclusively with NABL-certified and ISO-accredited laboratories like SRL Diagnostics, Thyrocare, and Metropolis.</p>
+            <p class="text-gray-600 leading-relaxed mb-4">As a third-party collection and coordination partner, we work exclusively with NABL-certified and ISO-accredited laboratories like Thyrocare, and Metropolis.</p>
             <p class="text-gray-600 leading-relaxed">Our trained phlebotomists visit your home, office, or any location at your preferred time. You get accurate results without stepping out.</p>
           </div>
           <!-- Stats grid -->
@@ -92,7 +92,7 @@ const aboutStats = [
   { value: '5 yrs', label: 'In service'      },
 ]
 const partnerLabs = [
-  { name: 'SRL Diagnostics', certifications: ['NABL', 'ISO 15189'], desc: "One of India's largest diagnostics networks with state-of-the-art equipment." },
+  // { name: 'SRL Diagnostics', certifications: ['NABL', 'ISO 15189'], desc: "One of India's largest diagnostics networks with state-of-the-art equipment." },
   { name: 'Thyrocare',       certifications: ['NABL', 'CAP'],       desc: 'Specialist lab for thyroid, hormones, and preventive health packages.'         },
   { name: 'Metropolis',      certifications: ['NABL', 'ISO 9001'],  desc: 'Advanced diagnostics including genomics, oncology, and rare disease testing.'   },
 ]
