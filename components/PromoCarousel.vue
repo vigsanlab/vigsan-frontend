@@ -104,7 +104,7 @@ const cards = [
     link: '/tests',
   },
   {
-    title: '500+ Tests Available', sub: 'From basic CBC to advanced cancer markers — all under one roof.',
+    title: '1000+ Tests Available', sub: 'From basic CBC to advanced cancer markers — all under one roof.',
     bg1: '#081820', bg2: '#0F2A30', orb: '#06B6D4',
     icon: Microscope, iconBg: 'rgba(6,182,212,0.2)', iconColor: '#67E8F9',
     badge: 'Comprehensive', badgeBg: 'rgba(6,182,212,0.2)', badgeColor: '#67E8F9',

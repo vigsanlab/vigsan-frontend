@@ -87,7 +87,7 @@ import { FlaskConical, ShieldCheck, Home, DollarSign, FileText, Clock, MessageCi
 useHead({ title: 'About Us — Vigsan Healthcare Labs' })
 const aboutStats = [
   { value: '10K+',  label: 'Patients served' },
-  { value: '500+',  label: 'Tests offered'   },
+  { value: '1000+',  label: 'Tests offered'   },
   { value: '3+',    label: 'Partner labs'    },
   { value: '5 yrs', label: 'In service'      },
 ]
