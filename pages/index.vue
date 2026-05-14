@@ -275,11 +275,10 @@
         <div v-if="loading" class="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div v-for="i in 3" :key="i" class="skeleton h-52" />
         </div>
-        <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div v-for="(pkg, i) in packages" :key="pkg._id" class="reveal" :class="`reveal-delay-${i+1}`">
-            <TestCard :test="pkg" />
-          </div>
+        <div v-else-if="packages.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <TestCard v-for="pkg in packages" :key="pkg._id" :test="pkg" />
         </div>
+        <div v-else class="text-center py-12 text-gray-400">No Packages available yet.</div>
       </div>
     </section>
 
@@ -535,7 +534,7 @@ onMounted(async () => {
       fetchWithCache('packages',       () => get<any[]>('/tests?category=package&limit=3')),
     ])
     featuredTests.value = f
-    packages.value = p
+    packages.value = p;
   } catch (e) { console.error(e) }
   finally { loading.value = false }
 })
