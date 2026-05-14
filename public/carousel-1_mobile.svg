@@ -1,0 +1,162 @@
+<svg viewBox="0 0 360 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12060A"/>
+      <stop offset="50%" stop-color="#1E0C00"/>
+      <stop offset="100%" stop-color="#2A1200"/>
+    </linearGradient>
+    <linearGradient id="saff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+    <linearGradient id="saffH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <linearGradient id="phoneBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A1800"/>
+      <stop offset="100%" stop-color="#150C00"/>
+    </linearGradient>
+    <linearGradient id="screenBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E0700"/>
+      <stop offset="100%" stop-color="#1A0E00"/>
+    </linearGradient>
+    <radialGradient id="orbR" cx="80%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pShadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="bShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#FF6B00" flood-opacity="0.28"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="360" height="440" fill="url(#bg)"/>
+  <rect width="360" height="440" fill="url(#orbR)"/>
+
+  <!-- Geometric accent lines -->
+  <line x1="0" y1="0" x2="140" y2="440" stroke="rgba(255,107,0,0.04)" stroke-width="1.5"/>
+  <line x1="360" y1="60" x2="200" y2="440" stroke="rgba(255,107,0,0.03)" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="360" height="3" fill="url(#saffH)"/>
+
+  <!-- ── BADGE ROW (top) ── -->
+  <!-- Badge 1 -->
+  <rect x="16" y="18" width="98" height="52" rx="14" fill="rgba(20,10,0,0.8)" stroke="rgba(255,107,0,0.45)" stroke-width="1.2" filter="url(#bShadow)"/>
+  <rect x="17" y="19" width="96" height="20" rx="13" fill="rgba(255,107,0,0.1)"/>
+  <text x="34" y="42" font-size="18">⚡</text>
+  <text x="60" y="40" font-family="system-ui,sans-serif" font-size="14" fill="white" font-weight="900">2 min</text>
+  <text x="34" y="60" font-family="system-ui,sans-serif" font-size="7.5" fill="rgba(255,180,60,0.9)">to book any test</text>
+
+  <!-- Badge 2 -->
+  <rect x="131" y="18" width="98" height="52" rx="14" fill="rgba(20,10,0,0.8)" stroke="rgba(255,160,0,0.4)" stroke-width="1.2" filter="url(#bShadow)"/>
+  <rect x="132" y="19" width="96" height="20" rx="13" fill="rgba(255,150,0,0.08)"/>
+  <text x="148" y="42" font-size="18">🔬</text>
+  <text x="174" y="40" font-family="system-ui,sans-serif" font-size="14" fill="white" font-weight="900">1000+</text>
+  <text x="148" y="60" font-family="system-ui,sans-serif" font-size="7.5" fill="rgba(255,180,60,0.9)">tests available</text>
+
+  <!-- Badge 3 -->
+  <rect x="246" y="18" width="98" height="52" rx="14" fill="rgba(20,10,0,0.8)" stroke="rgba(255,107,0,0.38)" stroke-width="1.2" filter="url(#bShadow)"/>
+  <rect x="247" y="19" width="96" height="20" rx="13" fill="rgba(255,107,0,0.08)"/>
+  <text x="262" y="42" font-size="18">🏠</text>
+  <text x="288" y="40" font-family="system-ui,sans-serif" font-size="14" fill="white" font-weight="900">Free</text>
+  <text x="262" y="60" font-family="system-ui,sans-serif" font-size="7.5" fill="rgba(255,180,60,0.9)">home collection</text>
+
+  <!-- ── PHONE MOCKUP (centered) ── -->
+  <ellipse cx="180" cy="348" rx="70" ry="10" fill="rgba(0,0,0,0.45)"/>
+
+  <rect x="104" y="88" width="152" height="252" rx="24" fill="url(#phoneBg)" filter="url(#pShadow)"/>
+  <rect x="104" y="88" width="152" height="252" rx="24" fill="none" stroke="rgba(255,140,0,0.5)" stroke-width="1.5"/>
+
+  <!-- Screen -->
+  <rect x="111" y="102" width="138" height="226" rx="15" fill="url(#screenBg)"/>
+
+  <!-- Status bar -->
+  <rect x="111" y="102" width="138" height="22" rx="15" fill="rgba(0,0,0,0.2)"/>
+  <text x="120" y="116" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,180,60,0.65)" font-weight="600">9:41</text>
+  <text x="243" y="116" text-anchor="end" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,180,60,0.55)">■■■</text>
+  <rect x="144" y="102" width="72" height="12" rx="6" fill="#0E0700"/>
+
+  <!-- App header -->
+  <rect x="111" y="124" width="138" height="24" fill="rgba(255,107,0,0.2)"/>
+  <text x="180" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#FFAA00" font-weight="800" letter-spacing="0.8">VIGSAN</text>
+
+  <!-- Search bar -->
+  <rect x="118" y="152" width="124" height="15" rx="7.5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,120,0,0.3)" stroke-width="0.8"/>
+  <text x="126" y="162.5" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.28)">Search tests...</text>
+
+  <!-- Section label -->
+  <text x="118" y="179" font-family="system-ui,sans-serif" font-size="6" fill="rgba(255,160,0,0.65)" font-weight="700" letter-spacing="0.8">POPULAR</text>
+
+  <!-- Test cards side by side -->
+  <rect x="118" y="184" width="58" height="58" rx="10" fill="rgba(255,100,0,0.22)" stroke="rgba(255,100,0,0.45)" stroke-width="0.9"/>
+  <text x="147" y="207" text-anchor="middle" font-size="18">🩸</text>
+  <text x="147" y="222" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,0.9)" font-weight="700">CBC</text>
+  <text x="147" y="234" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="#FFAA00">₹299</text>
+
+  <rect x="182" y="184" width="58" height="58" rx="10" fill="rgba(255,160,0,0.16)" stroke="rgba(255,160,0,0.38)" stroke-width="0.9"/>
+  <text x="211" y="207" text-anchor="middle" font-size="18">🦋</text>
+  <text x="211" y="222" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,0.9)" font-weight="700">Thyroid</text>
+  <text x="211" y="234" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="#FFAA00">₹399</text>
+
+  <!-- Full body package -->
+  <rect x="118" y="248" width="122" height="38" rx="9" fill="rgba(255,107,0,0.2)" stroke="rgba(255,130,0,0.45)" stroke-width="0.9"/>
+  <text x="128" y="263" font-family="system-ui,sans-serif" font-size="7.5" fill="white" font-weight="700">Full Body Checkup</text>
+  <text x="128" y="276" font-family="system-ui,sans-serif" font-size="6" fill="rgba(255,200,100,0.7)">77 parameters</text>
+  <text x="234" y="270" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="#FFD700" font-weight="900">₹799</text>
+
+  <!-- Book button -->
+  <rect x="118" y="292" width="122" height="22" rx="11" fill="url(#saff)"/>
+  <text x="179" y="306.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" fill="white" font-weight="800">Book Now  →</text>
+
+  <!-- Confirmed chip -->
+  <rect x="118" y="320" width="122" height="18" rx="9" fill="rgba(29,185,84,0.2)" stroke="rgba(29,185,84,0.5)" stroke-width="0.8"/>
+  <text x="179" y="332" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#4ADE80" font-weight="700">✓ Slot confirmed — 7 AM</text>
+
+  <!-- Home bar -->
+  <rect x="152" y="321" width="56" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- ── STEP TRACKER (bottom) ── -->
+  <rect x="16" y="362" width="328" height="62" rx="16" fill="rgba(0,0,0,0.4)" stroke="rgba(255,107,0,0.2)" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <circle cx="54" cy="393" r="16" fill="url(#saff)" filter="url(#glow)"/>
+  <text x="54" y="398.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="white" font-weight="900">1</text>
+  <text x="54" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,180,60,0.95)" font-weight="700">Choose</text>
+
+  <line x1="73" y1="393" x2="100" y2="393" stroke="rgba(255,107,0,0.45)" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Step 2 -->
+  <circle cx="118" cy="393" r="14" fill="rgba(255,107,0,0.2)" stroke="rgba(255,107,0,0.5)" stroke-width="1.2"/>
+  <text x="118" y="398.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" font-weight="800">2</text>
+  <text x="118" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,0.4)">Book</text>
+
+  <line x1="135" y1="393" x2="162" y2="393" stroke="rgba(255,107,0,0.3)" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Step 3 -->
+  <circle cx="180" cy="393" r="14" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.28)" stroke-width="1"/>
+  <text x="180" y="398.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.38)" font-weight="700">3</text>
+  <text x="180" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,0.25)">Pickup</text>
+
+  <line x1="197" y1="393" x2="224" y2="393" stroke="rgba(255,107,0,0.18)" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Step 4 -->
+  <circle cx="242" cy="393" r="14" fill="rgba(255,107,0,0.06)" stroke="rgba(255,107,0,0.16)" stroke-width="1"/>
+  <text x="242" y="398.5" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.2)" font-weight="700">4</text>
+  <text x="242" y="413" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,255,255,0.18)">Report</text>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="28" width="5" height="80" rx="2.5" fill="url(#saff)" opacity="0.7"/>
+  <rect x="8" y="44" width="3" height="52" rx="1.5" fill="url(#gold)" opacity="0.35"/>
+</svg>

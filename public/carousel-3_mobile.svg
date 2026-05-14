@@ -1,0 +1,210 @@
+<svg viewBox="0 0 360 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080F"/>
+      <stop offset="55%" stop-color="#0C1228"/>
+      <stop offset="100%" stop-color="#101838"/>
+    </linearGradient>
+    <linearGradient id="saff" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+    <linearGradient id="saffH" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <linearGradient id="blue3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C2D5E"/>
+      <stop offset="100%" stop-color="#2A4E9A"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3080"/>
+      <stop offset="100%" stop-color="#0E1840"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0C1635"/>
+      <stop offset="100%" stop-color="#060C1E"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4A068"/>
+      <stop offset="100%" stop-color="#B87840"/>
+    </linearGradient>
+    <radialGradient id="orbBlue" cx="75%" cy="65%" r="50%">
+      <stop offset="0%" stop-color="#3B9BE8" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#3B9BE8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbSaff" cx="20%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="houseShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="personShadow">
+      <feDropShadow dx="3" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="chipShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="saffGlow">
+      <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#FF6B00" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="360" height="440" fill="url(#bg)"/>
+  <rect width="360" height="440" fill="url(#orbBlue)"/>
+  <rect width="360" height="440" fill="url(#orbSaff)"/>
+
+  <!-- Geometric lines -->
+  <line x1="0" y1="0" x2="160" y2="440" stroke="rgba(255,107,0,0.035)" stroke-width="1.5"/>
+  <line x1="360" y1="0" x2="200" y2="440" stroke="rgba(59,155,232,0.035)" stroke-width="1.5"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="360" height="3" fill="url(#saffH)"/>
+
+  <!-- ── STAT CHIPS ROW (top) ── -->
+  <!-- Patients -->
+  <rect x="16" y="14" width="100" height="56" rx="14" fill="rgba(8,14,35,0.9)" stroke="rgba(255,107,0,0.38)" stroke-width="1.1" filter="url(#saffGlow)"/>
+  <rect x="17" y="15" width="98" height="22" rx="13" fill="rgba(255,107,0,0.09)"/>
+  <text x="30" y="38" font-size="18">😊</text>
+  <text x="58" y="36" font-family="system-ui,sans-serif" font-size="16" fill="white" font-weight="900">10K+</text>
+  <text x="26" y="56" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,160,0,0.75)">Happy patients</text>
+  <!-- Stars -->
+  <text x="26" y="65" font-family="system-ui,sans-serif" font-size="8" fill="#FFD700">★★★★★</text>
+
+  <!-- Areas -->
+  <rect x="130" y="14" width="100" height="56" rx="14" fill="rgba(8,14,35,0.9)" stroke="rgba(59,155,232,0.32)" stroke-width="1.1" filter="url(#chipShadow)"/>
+  <rect x="131" y="15" width="98" height="22" rx="13" fill="rgba(59,155,232,0.07)"/>
+  <text x="144" y="38" font-size="18">📍</text>
+  <text x="172" y="36" font-family="system-ui,sans-serif" font-size="16" fill="white" font-weight="900">25+</text>
+  <text x="140" y="56" font-family="system-ui,sans-serif" font-size="7" fill="rgba(100,180,255,0.7)">Areas in Pune</text>
+  <text x="140" y="66" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.3)">covered</text>
+
+  <!-- NABL -->
+  <rect x="244" y="14" width="100" height="56" rx="14" fill="rgba(8,14,35,0.9)" stroke="rgba(0,229,137,0.3)" stroke-width="1.1" filter="url(#chipShadow)"/>
+  <rect x="245" y="15" width="98" height="22" rx="13" fill="rgba(0,229,137,0.06)"/>
+  <text x="258" y="38" font-size="18">🏅</text>
+  <text x="285" y="35" font-family="system-ui,sans-serif" font-size="9.5" fill="white" font-weight="800">NABL</text>
+  <text x="285" y="48" font-family="system-ui,sans-serif" font-size="9.5" fill="white" font-weight="800">Certified</text>
+  <text x="258" y="64" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(0,229,137,0.65)">ISO 9001</text>
+
+  <!-- ── HOUSE + PERSON (center section) ── -->
+  <!-- House ground shadow -->
+  <ellipse cx="220" cy="294" rx="100" ry="10" fill="rgba(0,0,0,0.5)"/>
+
+  <!-- House wall -->
+  <rect x="130" y="198" width="180" height="96" rx="7" fill="url(#wallGrad)" stroke="rgba(59,155,232,0.3)" stroke-width="1.1" filter="url(#houseShadow)"/>
+
+  <!-- Roof -->
+  <polygon points="118,202 220,128 322,202" fill="url(#roofGrad)" stroke="rgba(255,107,0,0.5)" stroke-width="1.6"/>
+  <line x1="118" y1="202" x2="220" y2="128" stroke="#FF8800" stroke-width="2"/>
+  <line x1="220" y1="128" x2="322" y2="202" stroke="#FF8800" stroke-width="2"/>
+  <polygon points="210,128 220,114 230,128" fill="url(#saff)"/>
+
+  <!-- Chimney -->
+  <rect x="265" y="150" width="16" height="28" rx="3" fill="rgba(12,22,55,0.9)" stroke="rgba(59,155,232,0.3)" stroke-width="0.8"/>
+
+  <!-- Window L -->
+  <rect x="142" y="214" width="52" height="44" rx="7" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.4)" stroke-width="1.1"/>
+  <line x1="168" y1="214" x2="168" y2="258" stroke="rgba(255,107,0,0.28)" stroke-width="0.8"/>
+  <line x1="142" y1="236" x2="194" y2="236" stroke="rgba(255,107,0,0.28)" stroke-width="0.8"/>
+  <rect x="144" y="216" width="22" height="18" rx="3" fill="rgba(255,180,60,0.16)"/>
+
+  <!-- Window R -->
+  <rect x="246" y="214" width="52" height="44" rx="7" fill="rgba(59,155,232,0.1)" stroke="rgba(59,155,232,0.35)" stroke-width="1.1"/>
+  <line x1="272" y1="214" x2="272" y2="258" stroke="rgba(59,155,232,0.22)" stroke-width="0.8"/>
+  <line x1="246" y1="236" x2="298" y2="236" stroke="rgba(59,155,232,0.22)" stroke-width="0.8"/>
+  <rect x="248" y="216" width="22" height="18" rx="3" fill="rgba(100,180,255,0.1)"/>
+
+  <!-- Door -->
+  <rect x="196" y="246" width="48" height="48" rx="7" fill="rgba(255,107,0,0.18)" stroke="rgba(255,107,0,0.5)" stroke-width="1.2"/>
+  <path d="M196,253 Q220,236 244,253" fill="none" stroke="rgba(255,107,0,0.5)" stroke-width="1"/>
+  <circle cx="234" cy="270" r="3" fill="#FF9500"/>
+
+  <!-- Phlebotomist person -->
+  <g filter="url(#personShadow)">
+    <ellipse cx="88" cy="294" rx="30" ry="7" fill="rgba(0,0,0,0.45)"/>
+    <!-- Legs -->
+    <rect x="72" y="256" width="15" height="36" rx="7" fill="#0E1830"/>
+    <rect x="91" y="256" width="15" height="36" rx="7" fill="#0E1830"/>
+    <ellipse cx="80" cy="293" rx="12" ry="6" fill="#060C18"/>
+    <ellipse cx="98" cy="293" rx="12" ry="6" fill="#060C18"/>
+    <!-- Coat -->
+    <rect x="60" y="196" width="56" height="66" rx="13" fill="#1C2D5E" stroke="rgba(255,107,0,0.22)" stroke-width="1"/>
+    <path d="M74" y="199" font-family="system-ui" font-size="0"/>
+    <path d="M74,200 Q88,212 102,200" fill="none" stroke="#FFAA00" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Cross badge -->
+    <rect x="74" y="220" width="14" height="14" rx="3" fill="rgba(220,50,50,0.2)" stroke="rgba(220,50,50,0.5)" stroke-width="0.8"/>
+    <line x1="81" y1="222" x2="81" y2="232" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="77" y1="227" x2="85" y2="227" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Arms -->
+    <rect x="44" y="204" width="18" height="40" rx="9" fill="url(#skinGrad)"/>
+    <rect x="114" y="204" width="18" height="40" rx="9" fill="#1C2D5E"/>
+    <!-- Bag -->
+    <rect x="126" y="222" width="34" height="28" rx="7" fill="rgba(255,107,0,0.22)" stroke="rgba(255,107,0,0.5)" stroke-width="1.1"/>
+    <rect x="133" y="217" width="20" height="8" rx="4" fill="rgba(255,107,0,0.28)" stroke="rgba(255,107,0,0.45)" stroke-width="0.7"/>
+    <line x1="143" y1="229" x2="143" y2="243" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="136" y1="236" x2="150" y2="236" stroke="#FF9500" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- Head -->
+    <circle cx="88" cy="182" r="20" fill="url(#skinGrad)"/>
+    <path d="M68,177 Q70,161 88,159 Q106,161 108,177" fill="#2A1400"/>
+    <ellipse cx="82" cy="182" rx="2.5" ry="3" fill="#1A0800"/>
+    <ellipse cx="94" cy="182" rx="2.5" ry="3" fill="#1A0800"/>
+    <path d="M82,190 Q88,196 94,190" fill="none" stroke="#1A0800" stroke-width="1.3" stroke-linecap="round"/>
+    <rect x="76" y="188" width="24" height="12" rx="6" fill="rgba(255,255,255,0.9)" stroke="rgba(28,45,94,0.3)" stroke-width="0.5"/>
+    <!-- Cap -->
+    <rect x="68" y="164" width="40" height="8" rx="4" fill="#1C2D5E" stroke="rgba(255,107,0,0.28)" stroke-width="0.7"/>
+    <ellipse cx="88" cy="166" rx="22" ry="7" fill="#1C2D5E"/>
+    <line x1="88" y1="165" x2="88" y2="171" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="85" y1="168" x2="91" y2="168" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── FEATURE STRIP (bottom) ── -->
+  <rect x="16" y="308" width="328" height="68" rx="16" fill="rgba(0,0,0,0.42)" stroke="rgba(255,107,0,0.15)" stroke-width="1"/>
+
+  <!-- F1 -->
+  <circle cx="58" cy="334" r="17" fill="rgba(255,107,0,0.14)" stroke="rgba(255,107,0,0.35)" stroke-width="1.1"/>
+  <text x="58" y="339.5" text-anchor="middle" font-size="14">🌅</text>
+  <text x="58" y="357" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,160,0,0.85)" font-weight="700">7 AM</text>
+  <text x="58" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.38)">Early Slots</text>
+
+  <line x1="90" y1="316" x2="90" y2="364" stroke="rgba(255,107,0,0.12)" stroke-width="1"/>
+
+  <!-- F2 -->
+  <circle cx="138" cy="334" r="17" fill="rgba(59,155,232,0.13)" stroke="rgba(59,155,232,0.33)" stroke-width="1.1"/>
+  <text x="138" y="339.5" text-anchor="middle" font-size="14">💉</text>
+  <text x="138" y="357" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(100,180,255,0.85)" font-weight="700">Trained</text>
+  <text x="138" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.38)">Phlebotomist</text>
+
+  <line x1="170" y1="316" x2="170" y2="364" stroke="rgba(255,107,0,0.12)" stroke-width="1"/>
+
+  <!-- F3 -->
+  <circle cx="218" cy="334" r="17" fill="rgba(0,229,137,0.12)" stroke="rgba(0,229,137,0.3)" stroke-width="1.1"/>
+  <text x="218" y="339.5" text-anchor="middle" font-size="14">💳</text>
+  <text x="218" y="357" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(0,229,137,0.85)" font-weight="700">Zero Extra</text>
+  <text x="218" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.38)">Visit Charge</text>
+
+  <line x1="250" y1="316" x2="250" y2="364" stroke="rgba(255,107,0,0.12)" stroke-width="1"/>
+
+  <!-- F4 -->
+  <circle cx="298" cy="334" r="17" fill="rgba(255,107,0,0.11)" stroke="rgba(255,107,0,0.3)" stroke-width="1.1"/>
+  <text x="298" y="339.5" text-anchor="middle" font-size="14">📱</text>
+  <text x="298" y="357" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="rgba(255,160,0,0.85)" font-weight="700">WhatsApp</text>
+  <text x="298" y="368" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" fill="rgba(255,255,255,0.38)">Booking</text>
+
+  <!-- ── BOTTOM PARTNER STRIP ── -->
+  <rect x="16" y="390" width="328" height="36" rx="12" fill="rgba(8,14,35,0.88)" stroke="rgba(255,107,0,0.2)" stroke-width="1"/>
+  <text x="34" y="411" font-family="system-ui,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.3)" font-weight="600" letter-spacing="0.5">PROCESSED BY</text>
+  <rect x="108" y="398" width="72" height="18" rx="9" fill="rgba(255,107,0,0.12)" stroke="rgba(255,107,0,0.3)" stroke-width="0.8"/>
+  <text x="144" y="410" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(255,178,100,0.85)" font-weight="700">Thyrocare</text>
+  <rect x="194" y="398" width="80" height="18" rx="9" fill="rgba(59,155,232,0.1)" stroke="rgba(59,155,232,0.28)" stroke-width="0.8"/>
+  <text x="234" y="410" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="rgba(100,180,255,0.8)" font-weight="700">Metropolis</text>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="28" width="5" height="80" rx="2.5" fill="url(#saff)" opacity="0.7"/>
+  <rect x="8" y="44" width="3" height="52" rx="1.5" fill="url(#gold)" opacity="0.3"/>
+</svg>
