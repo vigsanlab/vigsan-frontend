@@ -112,7 +112,10 @@
                   <img
                     :src="isMobile ? slide.mobileImage : slide.image"
                     :alt="slide.title"
-                    class="absolute inset-0 w-full h-full object-cover"
+                    :class="[
+                      'absolute inset-0 w-full h-full',
+                      isMobile ? 'object-contain' : 'object-cover'
+                    ]"
                     style="opacity: 0.95;"
                   />
                 <!-- Bottom overlay title -->
