@@ -75,7 +75,7 @@ import { ArrowRight, ChevronLeft, ChevronRight, Tag, Home, Zap, Shield, Gift, Fl
 const slides = [
   {
     tag: 'Limited Offer', tagIcon: Tag, tagBg: 'rgba(245,158,11,0.25)', tagColor: '#FCD34D',
-    title: 'Full Body Checkup @ ₹799*', sub: '77 parameters · Free home collection · Reports in 24 hrs',
+    title: 'Full Body Checkup @ ₹799*', sub: '45 parameters · Free home collection · Reports in 24 hrs',
     bg1: '#0C1630', bg2: '#1C2D5E', orb: '#3B9BE8',
     btn: 'Book Now', btnBg: 'linear-gradient(135deg, #2EAB31, #239126)', btnShadow: 'rgba(46,171,49,0.4)',
     link: '/tests?category=package', tagColor2: '#FCD34D',
@@ -99,7 +99,7 @@ const slides = [
   },
   {
     tag: 'NABL Certified', tagIcon: Shield, tagBg: 'rgba(139,92,246,0.2)', tagColor: '#C4B5FD',
-    title: 'Diabetes Panel @ ₹349*', sub: 'HbA1c + Fasting Glucose + Insulin · Know your risk today',
+    title: 'Diabetes Panel @ ₹349*', sub: 'HbA1c + Fasting Glucose · Know your risk today',
     bg1: '#0D0A20', bg2: '#1A1040', orb: '#8B5CF6',
     btn: 'Check Diabetes Risk', btnBg: 'linear-gradient(135deg, #7C3AED, #8B5CF6)', btnShadow: 'rgba(139,92,246,0.4)',
     link: '/tests?category=diabetes',
@@ -107,7 +107,7 @@ const slides = [
   },
   {
     tag: 'New Package', tagIcon: Gift, tagBg: 'rgba(245,158,11,0.2)', tagColor: '#FCD34D',
-    title: 'Vitamin Deficiency Panel @ ₹499*', sub: 'Vitamin D + B12 + Iron + Calcium · 4 tests in one draw',
+    title: 'Vitamin Deficiency Panel @ ₹1299*', sub: 'Vitamin D + B12 + Iron + Calcium · 4 tests in one draw',
     bg1: '#1A1000', bg2: '#2A1A00', orb: '#F59E0B',
     btn: 'Book Panel', btnBg: 'linear-gradient(135deg, #D97706, #F59E0B)', btnShadow: 'rgba(245,158,11,0.4)',
     link: '/tests?category=vitamins',
