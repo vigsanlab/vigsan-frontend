@@ -485,7 +485,7 @@ const visibleTabs = computed(() => {
 
 // ── Form ──────────────────────────────────────────────────────
 const categories = ['blood','thyroid','diabetes','liver','kidney','vitamins','cardiac','package','other']
-const sampleTypes = ['Blood','Urine','Stool','Swab','Saliva','Hair','Skin','Other']
+const sampleTypes = ['Blood','Urine','Stool','Swab','Saliva','Hair','Skin','Blood/Urine','Other']
 const flags = [
   { key: 'fastingRequired', label: 'Fasting required' },
   { key: 'homeCollection',  label: 'Home collection'  },
